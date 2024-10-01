@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+  -webkit-text-size-adjust: none;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: auto !important;
+  scrollbar-color: #565656 #bfbfbf;
+  scrollbar-width: thin;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+  .container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &:hover {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  h1,
+  .h1 {
+    font-family: Cormorant Garamond;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  h2,
+  .h2 {
+    font-family: Cormorant Garamond;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  p {
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #D7D7D7;
+    margin: 0;
+  }
+
+  a {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+.swal2-success-circular-line-right, .swal2-success-fix , .swal2-success-circular-line-left {
+    background-color: transparent !important;
+}
+
+
+.swal2-popup.swal2-modal.swal2-icon-success.swal2-show {
+    background-color: #1F2732;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    transition: all 0.3s ease-in-out !important;
+    color: #1F2732 !important;
+    background-color: #D1B06B !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    border: 2px solid transparent !important;
+
+    &:hover {
+        color: #D1B06B !important;
+        background-color: transparent !important;
+        border: 2px solid #D1B06B !important;
+    }
+}
+
+div:where(.swal2-container) .swal2-html-container {
+    color: #fff !important;
+}
+
+.swal2-cancel.swal2-styled.swal2-default-outline {
+    transition: all 0.3s ease-in-out !important;
+    background-color: #161D27 !important;
+    color: #fff !important;
+    padding: 12px 20px !important;
+    padding: 1.2em 1.1em !important;
+    border-radius: 14px;
+    border: 2px solid transparent !important;
+
+
+    &:hover {
+        background-color: transparent !important;
+        border: 2px solid #161D27 !important;
+    }
+}
+
+}

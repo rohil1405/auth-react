@@ -1,0 +1,162 @@
+.product-wrap {
+    background-color: #161D27;
+
+    .product-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+
+        .product-search {
+            input {
+                width: 500px;
+                height: 55px;
+                border-radius: 10px;
+                background-color: #1F2732;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                font-weight: 600;
+                color: #D1B06B;
+                padding: 0 15px;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .add-to-cart {
+            position: relative;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                border-radius: 100%;
+                color: #161D27;
+                background-color: #D1B06B;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                font-size: 16px;
+                position: absolute;
+                top: -15%;
+                right: -8%;
+            }
+        }
+    }
+
+    .product-listing {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+
+        li {
+            width: calc(33.33% - 28px);
+            box-sizing: border-box;
+            background-color: #1F2732;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+
+            .listing-wrap {
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+
+                .product-top {
+                    padding: 0 0 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 14px;
+
+                    h2 {
+                        margin: 0;
+                        color: #d7d7d7;
+                        width: 100%;
+                    }
+
+                    .star-image {
+                        width: 100%;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        width: 100%;
+
+                        img {
+                            width: 150px;
+                            height: auto;
+                        }
+
+                        span {
+                            color: #d7d7d7;
+                            font-size: 18px;
+                            font-family: outfit;
+                        }
+                    }
+
+                    .price-wrap {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: 100%;
+
+                        .price-icon {
+                            background-color: transparent;
+                            border: 3px solid #D1B06B;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 100%;
+                        }
+
+                    }
+                }
+
+                .product-bottom {
+                    margin-top: auto;
+                    padding-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    border-top: 1px solid #3A4553;
+                    justify-content: space-between;
+
+                    .product-img {
+                        img {
+                            object-fit: cover;
+                            height: 100px;
+                            width: 100px;
+                        }
+                    }
+
+                    .cta-btn {
+                        display: block;
+                        text-decoration: none;
+                        font-family: "Outfit", sans-serif;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        text-align: left;
+                        color: #fff;
+                        padding: 12px 30px;
+                        background-color: #161D27;
+
+                        &:hover {
+                            background-color: #D1B06B;
+                            color: #1F2732;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}

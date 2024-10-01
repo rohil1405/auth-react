@@ -1,0 +1,63 @@
+.not-found-wrap {
+    background-color: #161D27;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .not-found {
+        .logos {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .not-found-item {
+            text-align: center;
+
+            .section-title {
+                font-family: Outfit;
+                font-size: 400px;
+                font-weight: 700;
+                line-height: 458px;
+                color: #D1B06B;
+            }
+
+            .section-content {
+                font-family: Cormorant Garamond;
+                font-size: 65px;
+                font-weight: 700;
+                line-height: 75px;
+                color: #FFF;
+            }
+
+            p {
+                padding: 13px 0 30px 0;
+            }
+
+            .cta-btn {
+                a {
+                    padding: 28px 73px;
+                    color: #1F2732;
+                    background-color: #D1B06B;
+                    font-family: Outfit;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    display: inline-block;
+                    border: 2px solid transparent;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #D1B06B;
+                        background-color: transparent;
+                        border: 2px solid #D1B06B;
+                    }
+                }
+            }
+        }
+    }
+}

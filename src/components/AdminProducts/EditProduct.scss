@@ -1,0 +1,73 @@
+.edit-product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    form {
+        background-color: #161D27;
+        padding: 32px;
+
+        .cancel-btn {
+            text-align: right;
+
+            button {
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 0 0 20px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            font-size: 20px;
+            padding: 0 20px;
+            font-weight: 500;
+            font-family: outfit;
+            letter-spacing: 1.2px;
+            color: #D1B06B;
+            position: relative;
+        }
+
+        .cta-btns {
+            text-align: center;
+
+            button {
+                font-weight: 600;
+                font-size: 18px;
+                cursor: pointer;
+                background-color: #D1B06B;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: 2px solid transparent;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border: 2px solid #D1B06B;
+                    background-color: transparent;
+                    color: rgba(209, 176, 107, 0.7);
+                }
+
+            }
+        }
+    }
+}
