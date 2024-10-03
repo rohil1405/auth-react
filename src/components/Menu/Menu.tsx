@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import icon from "../../assets/logo.png";
 import "./Menu.scss";
 import { Link } from "react-router-dom";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 interface MenuItem {
   label: string;
@@ -9,10 +10,33 @@ interface MenuItem {
 }
 
 interface MenuProps {
-  menuItems: MenuItem[]; 
+  menuItems: MenuItem[];
 }
 
 const Menu: React.FC<MenuProps> = ({ menuItems }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const auth = getAuth();
+    // Listen for authentication state changes and update `isLoggedIn` accordingly
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLoggedIn(!!user);
+    });
+
+    // Clean up the subscription on component unmount
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      const auth = getAuth();
+      await signOut(auth);
+      setIsLoggedIn(false);
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
+
   return (
     <div className="menu-container-wrap">
       <div className="menu-container">
@@ -27,7 +51,15 @@ const Menu: React.FC<MenuProps> = ({ menuItems }) => {
           </div>
         </div>
         <div className="menu-bottom">
-          <Link to="/login">Logout</Link>
+          {isLoggedIn ? (
+            <button className="auth-button" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link className="auth-button" to="/login">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

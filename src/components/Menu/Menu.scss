@@ -57,7 +57,9 @@
         .menu-bottom {
             padding-bottom: 25px;
 
-            a {
+            a,
+            button {
+                cursor: pointer;
                 padding: 15px 34px;
                 color: #1F2732;
                 background-color: #D1B06B;
