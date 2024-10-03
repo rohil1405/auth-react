@@ -96,103 +96,109 @@ const AddProduct: React.FC = () => {
 
   return (
     <>
-      <Menu menuItems={adminItems} />
-      <div className="form-wrap">
-        <div className="form">
-          <div className="login-wrap">
-            <form onSubmit={handleProduct}>
-              <h1>Add Product</h1>
-              {errorMessage && <p className="error">{errorMessage}</p>}
-              <InputField
-                type="number"
-                value={id}
-                placeholder="Enter Product Id"
-                onChange={(e) => setId(e.target.value)}
-              />
-              <img src={productid} alt="productid" className="add-product id" />
+      <div className="add-product-wrap">
+        <Menu menuItems={adminItems} />
+        <div className="form-wrap">
+          <div className="form">
+            <div className="login-wrap">
+              <form onSubmit={handleProduct}>
+                <h1>Add Product</h1>
+                {errorMessage && <p className="error">{errorMessage}</p>}
+                <InputField
+                  type="number"
+                  value={id}
+                  placeholder="Enter Product Id"
+                  onChange={(e) => setId(e.target.value)}
+                />
+                <img
+                  src={productid}
+                  alt="productid"
+                  className="add-product id"
+                />
 
-              <InputField
-                type="text"
-                value={title}
-                placeholder="Enter Product Title"
-                onChange={(e) => setTitle(e.target.value)}
-              />
-              <img
-                src={descriptionProduct}
-                alt="producttitle"
-                className="add-product title"
-              />
+                <InputField
+                  type="text"
+                  value={title}
+                  placeholder="Enter Product Title"
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <img
+                  src={descriptionProduct}
+                  alt="producttitle"
+                  className="add-product title"
+                />
 
-              <InputField
-                type="text"
-                value={description}
-                placeholder="Enter Product Description"
-                onChange={(e) => setDescription(e.target.value)}
-              />
-              <img
-                src={descriptionProduct}
-                alt="productdescription"
-                className="add-product description"
-              />
+                <InputField
+                  type="text"
+                  value={description}
+                  placeholder="Enter Product Description"
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+                <img
+                  src={descriptionProduct}
+                  alt="productdescription"
+                  className="add-product description"
+                />
 
-              <InputField
-                type="number"
-                value={price}
-                placeholder="Enter Product Price"
-                onChange={(e) => setPrice(e.target.value)}
-              />
-              <img
-                src={priceproduct}
-                alt="productprice"
-                className="add-product price"
-              />
+                <InputField
+                  type="number"
+                  value={price}
+                  placeholder="Enter Product Price"
+                  onChange={(e) => setPrice(e.target.value)}
+                />
+                <img
+                  src={priceproduct}
+                  alt="productprice"
+                  className="add-product price"
+                />
 
-              <InputField
-                type="text"
-                value={category}
-                placeholder="Enter Product Category"
-                onChange={(e) => setCategory(e.target.value)}
-              />
-              <img
-                src={productcategory}
-                alt="productcategory"
-                className="add-product category"
-              />
+                <InputField
+                  type="text"
+                  value={category}
+                  placeholder="Enter Product Category"
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+                <img
+                  src={productcategory}
+                  alt="productcategory"
+                  className="add-product category"
+                />
 
-              <InputField
-                type="number"
-                value={rating}
-                placeholder="Enter Product Rating"
-                onChange={(e) => setRating(e.target.value)}
-              />
-              <img
-                src={ratingproduct}
-                alt="productrating"
-                className="add-product rating"
-              />
+                <InputField
+                  type="number"
+                  value={rating}
+                  placeholder="Enter Product Rating"
+                  onChange={(e) => setRating(e.target.value)}
+                />
+                <img
+                  src={ratingproduct}
+                  alt="productrating"
+                  className="add-product rating"
+                />
 
-              <InputField
-                type="number"
-                value={count}
-                placeholder="Enter Your Count"
-                onChange={(e) => setCount(e.target.value)}
-              />
-              <img
-                src={countproduct}
-                alt="productcound"
-                className="add-product count"
-              />
+                <InputField
+                  type="number"
+                  value={count}
+                  placeholder="Enter Your Count"
+                  onChange={(e) => setCount(e.target.value)}
+                />
+                <img
+                  src={countproduct}
+                  alt="productcound"
+                  className="add-product count"
+                />
 
-              <input
-                type="file"
-                onChange={handleImageChange}
-                className="file-choose"
-              />
+                <input
+                  type="file"
+                  onChange={handleImageChange}
+                  className="file-choose"
+                />
 
-              <div className="cta-btn">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
+                <div className="cta-btn">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

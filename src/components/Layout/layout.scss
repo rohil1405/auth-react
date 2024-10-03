@@ -457,3 +457,13 @@
         }
     }
 }
+
+.review-wrap, .admin-product-wrap,
+.add-product-wrap,
+.add-user-wrap {
+    .menu-container-wrap {
+        .menu-bottom {
+            display: none;
+        }
+    }
+}

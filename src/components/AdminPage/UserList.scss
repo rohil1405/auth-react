@@ -3,11 +3,19 @@
     height: 100%;
     min-height: 100vh;
 
+    .menu-container-wrap {
+        .menu-bottom {
+            display: none;
+        }
+    }
+
     .user-data-wrap {
         position: relative;
 
         .user-data {
             .product-search {
+
+
                 input {
                     width: 500px;
                     height: 55px;

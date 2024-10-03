@@ -4,6 +4,7 @@ export const adminItems = [
   { label: "Add User", path: "/admin/adduser" },
   {label: "Product",  path: "/admin/product"},
   { label: "Reviews", path: "/admin/reviews" },
+  {label: "logout", path: '/login'}
 ];
 
 export const productItems = [

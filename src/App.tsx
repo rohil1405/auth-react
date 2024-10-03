@@ -36,7 +36,11 @@ const routes = [
   },
   {
     path: "/reset",
-    element: <Resetpass />,
+    element: (
+      <ProtectedRoute>
+        <Resetpass />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/admin/product",
@@ -49,15 +53,25 @@ const routes = [
 
   {
     path: "/product",
-    element: <Product />,
+    element: (
+        <Product />
+    ),
   },
   {
     path: "/order",
-    element: <MyOrder />,
+    element: (
+      <ProtectedRoute>
+        <MyOrder />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/cart",
-    element: <Cart />,
+    element: (
+      <ProtectedRoute>
+        <Cart />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/admin",

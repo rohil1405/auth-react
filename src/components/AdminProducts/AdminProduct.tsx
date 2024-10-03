@@ -105,78 +105,80 @@ const AdminProduct: React.FC = () => {
   };
 
   return (
-    <div className="product-wrap">
-      <div className="container">
-        <div className="product">
-          <Menu menuItems={adminItems} />
-          <ul className="product-listing">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <li key={product.id}>
-                  <div className="listing-wrap">
-                    <div>
-                      <h2>{product.title}</h2>
-                      <div className="price-wrap">
-                        <div className="price-icon">
-                          <img src={price} alt="Price icon" />
+    <div className="admin-product-wrap">
+      <div className="product-wrap">
+        <div className="container">
+          <div className="product">
+            <Menu menuItems={adminItems} />
+            <ul className="product-listing">
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                  <li key={product.id}>
+                    <div className="listing-wrap">
+                      <div>
+                        <h2>{product.title}</h2>
+                        <div className="price-wrap">
+                          <div className="price-icon">
+                            <img src={price} alt="Price icon" />
+                          </div>
+                          <p>${product.price ?? "N/A"}</p>
                         </div>
-                        <p>${product.price ?? "N/A"}</p>
+                        <div className="star-image">
+                          <img
+                            width="250px"
+                            style={{ objectFit: "cover", paddingTop: "20px" }}
+                            src={getStarImage(product.rating?.rate ?? 0)}
+                            alt={`${product.rating?.rate ?? 0} star rating`}
+                          />
+                          <span>({product.rating?.rate ?? "N/A"})</span>
+                        </div>
+                        <div className="product-img">
+                          <img
+                            src={product.image ?? loader}
+                            alt={product.title}
+                            width="100px"
+                            height="100px"
+                            style={{
+                              objectFit: "cover",
+                              marginTop: "20px",
+                              marginBottom: "20px",
+                            }}
+                          />
+                        </div>
                       </div>
-                      <div className="star-image">
-                        <img
-                          width="250px"
-                          style={{ objectFit: "cover", paddingTop: "20px" }}
-                          src={getStarImage(product.rating?.rate ?? 0)}
-                          alt={`${product.rating?.rate ?? 0} star rating`}
-                        />
-                        <span>({product.rating?.rate ?? "N/A"})</span>
-                      </div>
-                      <div className="product-img">
-                        <img
-                          src={product.image ?? loader}
-                          alt={product.title}
-                          width="100px"
-                          height="100px"
-                          style={{
-                            objectFit: "cover",
-                            marginTop: "20px",
-                            marginBottom: "20px",
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="product-bottom">
-                      <div
-                        className="edit-btn"
-                        onClick={() => handleUpdateProduct(product)}
-                      >
-                        <img src={edit} alt="edit" />
-                      </div>
-                      <div className="actions-btn">
+                      <div className="product-bottom">
                         <div
-                          className="delete-product"
-                          onClick={() => deleteProduct(product.firebaseId)}
+                          className="edit-btn"
+                          onClick={() => handleUpdateProduct(product)}
                         >
-                          <img src={deleteIcon} alt="delete" />
+                          <img src={edit} alt="edit" />
+                        </div>
+                        <div className="actions-btn">
+                          <div
+                            className="delete-product"
+                            onClick={() => deleteProduct(product.firebaseId)}
+                          >
+                            <img src={deleteIcon} alt="delete" />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              ))
-            ) : (
-              <p>No products available</p>
+                  </li>
+                ))
+              ) : (
+                <p>No products available</p>
+              )}
+            </ul>
+            {editProductModalOpen && selectedProduct && (
+              <EditProduct
+                product={{ ...selectedProduct }}
+                onClose={() => setEditProductModalOpen(false)}
+                onUpdate={(updatedProduct) => {
+                  setEditProductModalOpen(false);
+                }}
+              />
             )}
-          </ul>
-          {editProductModalOpen && selectedProduct && (
-            <EditProduct
-              product={{ ...selectedProduct }}
-              onClose={() => setEditProductModalOpen(false)}
-              onUpdate={(updatedProduct) => {
-                setEditProductModalOpen(false);
-              }}
-            />
-          )}
+          </div>
         </div>
       </div>
     </div>

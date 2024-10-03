@@ -31,7 +31,7 @@ const Login: React.FC = () => {
 
     if (email === "admin@gmail.com" && password === "admin") {
       const adminUser = {
-        id: "admin123", // You can define a unique ID for the admin user
+        id: "admin123", 
         email,
         name: "Admin",
       };
@@ -56,10 +56,9 @@ const Login: React.FC = () => {
       );
       const user = userCredential.user;
 
-      // Create a user object to match the `User` type in your state
       const loggedInUser = {
         id: user.uid,
-        email: user.email ?? "", // Ensure email is a string
+        email: user.email ?? "", 
         name: user.displayName ?? "User",
       };
 

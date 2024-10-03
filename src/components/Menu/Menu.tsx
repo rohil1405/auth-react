@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import icon from "../../assets/logo.png";
 import "./Menu.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 interface MenuItem {
@@ -15,10 +15,10 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ menuItems }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const auth = getAuth();
-
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(!!user);
     });
@@ -31,6 +31,7 @@ const Menu: React.FC<MenuProps> = ({ menuItems }) => {
       const auth = getAuth();
       await signOut(auth);
       setIsLoggedIn(false);
+      navigate('/login');
     } catch (error) {
       console.error("Error signing out:", error);
     }
