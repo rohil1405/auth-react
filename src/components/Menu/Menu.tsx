@@ -18,12 +18,11 @@ const Menu: React.FC<MenuProps> = ({ menuItems }) => {
 
   useEffect(() => {
     const auth = getAuth();
-    // Listen for authentication state changes and update `isLoggedIn` accordingly
+
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(!!user);
     });
 
-    // Clean up the subscription on component unmount
     return () => unsubscribe();
   }, []);
 
