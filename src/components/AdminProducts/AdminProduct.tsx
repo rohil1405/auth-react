@@ -82,7 +82,7 @@ const AdminProduct: React.FC = () => {
         });
 
         if (!deleteRes.ok) {
-          const errorMessage = await deleteRes.text(); // Log the error message for debugging
+          const errorMessage = await deleteRes.text(); 
           throw new Error(`Failed to delete product: ${errorMessage}`);
         }
 

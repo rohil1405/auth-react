@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const fetchAllProducts = async () => {
+export const fetchAllProducts = async () => {
   const firebaseDatabaseURL = `https://rolereact-f4a63-default-rtdb.firebaseio.com/products.json`;
 
   try {
