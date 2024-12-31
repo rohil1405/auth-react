@@ -104,4 +104,5 @@ describe("Login Component", () => {
       });
     });
   });
-});
+}
+);

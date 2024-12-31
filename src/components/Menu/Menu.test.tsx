@@ -101,4 +101,5 @@ describe("Menu Component", () => {
     expect(signOut).toHaveBeenCalled();
     await waitFor(() => expect(mockNavigate).not.toHaveBeenCalled()); 
   });
-});
+}
+);

@@ -19,4 +19,5 @@ describe('productItems Array', () => {
     expect(productItems[1]).toEqual({ label: "My Orders", path: "/order" });
     expect(productItems[2]).toEqual({ label: "Add to Cart", path: "/cart" });
   });
-});
+}
+);

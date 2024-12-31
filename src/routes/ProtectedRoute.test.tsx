@@ -97,4 +97,5 @@ describe("ProtectedRoute Component", () => {
     ));
     expect(screen.getByText("Protected Content")).toBeInTheDocument();
   });
-});
+}
+);

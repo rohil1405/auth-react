@@ -87,4 +87,5 @@ describe('productsSlice', () => {
     expect(result.products).toHaveLength(1);
     expect(result.products).toEqual(newProducts);
   });
-});
+}
+);

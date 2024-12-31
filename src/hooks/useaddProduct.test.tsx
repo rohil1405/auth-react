@@ -98,4 +98,5 @@ describe("addProductsToFirebase", () => {
 
     expect(fetch).toHaveBeenCalledTimes(21);
   });
-});
+}
+);

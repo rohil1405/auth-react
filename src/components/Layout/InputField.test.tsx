@@ -63,4 +63,5 @@ describe("InputField Component", () => {
     const inputElement = screen.getByPlaceholderText("Enter text");
     expect(inputElement).toHaveValue("initial value");
   });
-});
+}
+);

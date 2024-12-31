@@ -35,4 +35,5 @@ describe('fetchProductsFromFirebase', () => {
     expect(fetchMock).toHaveBeenCalledWith('https://rolereact-f4a63-default-rtdb.firebaseio.com/products.json');
   });
 
-});
+}
+);

@@ -10,7 +10,8 @@ describe("authSlice", () => {
 
     const result = authReducer(undefined, { type: "" });
     expect(result).toEqual(initialState);
-  });
+  }
+);
   it("should handle loginUser", () => {
     const user = {
       id: "1",

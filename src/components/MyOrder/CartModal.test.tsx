@@ -72,4 +72,5 @@ describe("CartModal Component", () => {
     );
     expect(textarea).toHaveValue("Test review");
   });
-});
+}
+);

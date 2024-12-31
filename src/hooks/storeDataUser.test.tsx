@@ -18,7 +18,6 @@ describe('storeUserData', () => {
     jest.clearAllMocks();
   });
 
-
   it('should store user data successfully', async () => {
     Object.defineProperty(auth, 'currentUser', {
       get: jest.fn().mockReturnValue({

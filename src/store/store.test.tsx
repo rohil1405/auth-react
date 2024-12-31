@@ -31,4 +31,5 @@ describe('Redux Store', () => {
     const dispatch: AppDispatch = store.dispatch;
     expect(dispatch).toBeDefined();
   });
-});
+}
+);

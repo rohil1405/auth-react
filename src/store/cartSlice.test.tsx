@@ -31,7 +31,8 @@ import cartReducer, {
       const state = cartReducer(initialState, action);
       expect(state.items).toHaveLength(1);
       expect(state.items[0]).toEqual(mockItem);
-    });
+    }
+  );
   
     it("should handle addToCart when the item already exists", () => {
       const existingState = { items: [mockItem] };

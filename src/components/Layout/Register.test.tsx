@@ -152,4 +152,5 @@ describe("Register Component", () => {
     fireEvent.click(toggleIcon);
     expect(passwordInput).toHaveAttribute("type", "password");
   });
-});
+}
+);
